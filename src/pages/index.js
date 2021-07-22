@@ -1,4 +1,5 @@
 import Layout from '../components/Layout/Layout'
+import CountriesTable from '../components/CountriesTable/CountriesTable'
 import SearchInput from '../components/SearchInput/SearchInput'
 import styles from '../styles/Home.module.css'
 
@@ -6,6 +7,8 @@ export default function Home({ countries }) {
   return <Layout>
     <div className={styles.counts}> Found {countries.length} countries</div>
     <SearchInput placeholder="Filter by name, Region or SubRegion" />
+  
+    <CountriesTable countries={countries} />
   </Layout>
 }
 
